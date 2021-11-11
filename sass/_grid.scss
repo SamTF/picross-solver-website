@@ -1,0 +1,35 @@
+.grid {
+    //// The Grid itself
+    // display
+    display: grid;
+    grid-gap: 10px;
+
+    // size
+    width: 30vh;
+    height: 30vh;
+    margin: 2rem;
+    overflow: hidden;
+
+    // design
+    border: none;
+    border-radius: 15px;
+    outline: 10px solid $accent-colour;
+    outline-offset: 10px;
+    background: $main-colour;
+
+    // All spaces
+    div {
+        background: transparentize($text-colour, 0.9);
+    }
+
+    // Filled in spaces
+    .filled {
+        background-color: $accent-colour !important;
+    }
+
+    // Empty spaces
+    .empty {
+        // background: yellow;
+        // background-color: fade-out($text-colour, 0.9);
+    }
+}

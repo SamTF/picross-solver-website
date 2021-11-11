@@ -1,0 +1,107 @@
+$padding-y: 15px;       // vertical padding
+$padding-x: 20px;       // horizontal padding
+$outline-offset: 4px;   // distance between outline and border
+
+button {
+    // Box design
+    background-color: $accent-colour;
+    padding: $padding-y $padding-x;
+    border: none;
+    border-radius: 15px;
+
+    // Spacing
+    margin: 1rem;
+
+    // Text
+    color: $text-colour;
+    font-family: $body-font;
+    font-size: $body-size;
+    text-decoration: none;
+
+    // Cursor
+    cursor: pointer;
+    
+    // Animation
+    transition: all 250ms;
+
+    // Mouse over
+    &:hover {
+        background-color: darken($accent-colour, 25%);
+        font-size: $body-size + 0.125rem;
+        // padding: 12px 20px;
+        padding: ($padding-y * 0.8) ($padding-x * 1.2);
+        outline: 2px dashed white;
+        outline-offset: $outline-offset;
+    }
+
+    // Clicking
+    &:active {
+        // padding: 10px 24px;
+        background-color: lighten($accent-colour, 25%);
+        outline-offset: $outline-offset * 2;
+
+        transition: all 0ms;
+    }
+}
+
+// Larger button
+.btn-large {
+    font-size: $h3-size;
+    border-radius: 20px;
+
+    &:hover {
+        padding: ($padding-y * 0.4) ($padding-x * 1.5);
+        font-size: $h3-size;
+    }
+
+    // on mobile screens
+    @include screen-max(940px) {
+        font-size: $subtitle-size;
+    }
+}
+
+// Fixed Info button
+.info {
+    // Fixed position - top right
+    position: fixed;
+    right: 3rem;
+    top: 3rem;
+
+    // Font
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: $h3-size;
+    text-align: center;
+
+    // Sizes
+    margin: 0;
+    padding: 0;
+    width: 4rem;
+    height: 4rem;
+
+    // Design
+    border-radius: 50%;
+    background-color: $text-colour;
+    color: $accent-colour;
+
+    &:hover {
+        font-size: $h3-size;
+        background-color: $text-colour;
+        padding: 0;
+    }
+
+    &:active {
+        background-color: darken($accent-colour, 25%);
+        color: $text-colour;
+        outline: 2px dashed white;
+        outline-offset: $outline-offset * 2;
+    }
+
+    // mobile screens
+    @include screen-max(940px) {
+        // Fixed position - bottom right
+        top:auto;
+        bottom: 2.5rem;
+        right: 5%;
+    }
+}

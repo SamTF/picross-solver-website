@@ -1,0 +1,94 @@
+// The Form containing all the input
+form {
+    display: grid;
+    place-items: center;
+
+    div {
+        margin-bottom: 1rem;
+
+        p {
+            text-align: left;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+// The Number & Text input fields
+input {
+    // Font
+    font-family: $heading-font;
+    // font-family: $mono;
+    font-size: $subtitle-size;
+    color: $main-colour;
+    text-align: center;
+
+    // Size
+    // max-width: 5vw;
+    width: clamp(60px, 5vw, 100px);
+    // width: clamp(60px, 2.5vw, 200px);
+    padding: 0.25rem 0;
+
+    // Design
+    background-color: transparent;
+    border: none;
+    border-right: 2px solid transparentize($text-colour, 0.5);
+    // border-right: 2px solid $main-colour;
+    color: $text-colour;
+    // no borders on the last input block, since we only want the borders on the right
+    &:last-child {
+        border: none;
+    }
+}
+
+.input-blocks {
+    overflow: hidden;
+    border-radius: 15px;
+
+    background: $main-colour;
+    box-shadow: inset 31px 31px 57px #070707,
+            inset -31px -31px 57px #151515;
+}
+
+
+
+// Grid Size Number Input
+.grid-size {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // align-items: center;
+    margin-top: 1rem;
+
+    // Label
+    strong {
+        justify-self: start;
+        font-size: 2.5rem;
+    }
+
+    // Number Input Field
+    input {
+        justify-self: end;
+        // font
+        font-family: $mono;
+        font-size: $h2-size;
+        text-align: center;
+        color: rgb(194, 16, 16);
+
+        // design
+        border: none;
+        background-color: $main-colour;
+        border-radius: 10px;
+        text-shadow: 0px 0px 10px rgb(153, 13, 13);
+        // background: $text-colour;
+        box-shadow: inset 31px 31px 57px #070707,
+            inset -31px -31px 57px #151515;
+
+        // size
+        // width: 5vw;
+        width: clamp(100px, 5vmax, 200px);
+        padding: 0.5rem 0;
+    }
+}
+
+// Styling the up/down arrows in a number input form
+// https://stackoverflow.com/questions/26024771/styling-an-input-type-number
+// https://stackoverflow.com/questions/45396280/customizing-increment-arrows-on-input-of-type-number-using-css/45396364

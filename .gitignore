@@ -1,0 +1,8 @@
+__pycache__/
+
+node_modules/
+public/build/
+**/public/build/
+svelte-frontend/
+
+.DS_Store
