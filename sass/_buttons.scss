@@ -83,6 +83,7 @@ button {
     border-radius: 50%;
     background-color: $text-colour;
     color: $accent-colour;
+    filter: drop-shadow(4px 4px 4px black);
 
     &:hover {
         font-size: $h3-size;
@@ -103,5 +104,10 @@ button {
         top:auto;
         bottom: 2.5rem;
         right: 5%;
+
+        // Size
+        font-size: 3.5rem;
+        height: 5rem;
+        width: 5rem;
     }
 }
