@@ -56,8 +56,8 @@
 
         // Dispatching the event + data
         dispatch('submit', formattedBlocks);
-        console.log('>>> INPUT SUBMITTED SUCCESSFULLY!');
-        console.log(Blocks)
+        // console.log('>>> INPUT SUBMITTED SUCCESSFULLY!');
+        // console.log(formattedBlocks)
     }
 
     // Checks if there any input elements with empty values
@@ -102,7 +102,7 @@
 
     // Changes the data in the Input blocks to match the random puzzle just generated
     export function override_blocks(new_blocks) {
-        console.log("HELLLLOOOO!!!");
+        // console.log("HELLLLOOOO!!!");
         if (!new_blocks.hasOwnProperty('rows')) {
                 console.error('Object does not have the required properties');
                 return;
@@ -144,11 +144,3 @@
 
     <button class="btn-large" on:click|preventDefault={on_submit}>SOLVE!</button>
 </form>
-
-
-<!-- CSS -->
-<!-- <style>
-    input {
-        max-width: 5vw;
-    }
-</style> -->
