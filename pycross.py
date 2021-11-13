@@ -1,7 +1,6 @@
 import numpy as np
-from typing import List
+from typing import List, Dict
 
-from app import rand
 
 def rand_board(size:int = 5) -> List[List[int]]:
     '''
@@ -20,9 +19,9 @@ def rand_board(size:int = 5) -> List[List[int]]:
     return {"board" : board.tolist(), "blocks" : guides, "success" : True}
 
 
-def create_guides(board):
+def create_guides(board) -> Dict[str, List[int]]:
     '''
-    Generates the number guides for both axis on the board.
+    Generates the number guides for both axis on the board. Returns a dictionary of lists.
     '''
     guides = {}
     guides['rows'] = create_axis_guides(board)
@@ -30,9 +29,10 @@ def create_guides(board):
 
     return guides
 
-def create_axis_guides(board):
+
+def create_axis_guides(board) -> List[int]:
     '''
-    Generates a number guide for each line in a single axis.
+    Generates a number guide for each line in a single axis. Returns a list of ints.
     '''
     axis_guides = []
 

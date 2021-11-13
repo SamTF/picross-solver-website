@@ -115,3 +115,5 @@ def zeros_and_ones(solution:List[str]) -> List[int]:
 ### RUNNING THE APP
 if __name__ == "__main__":
     app.run(port=5000)
+else:
+    print("APP IMPORTED")
